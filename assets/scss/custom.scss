@@ -1,0 +1,594 @@
+// Utils
+@import 'inc/mixins';
+@import 'inc/foundation-custom';
+// Plugins
+@import 'plugins/font-awesome/fontawesome';
+@import 'plugins/slick.scss';
+//@import 'plugins/jquery.fancybox.v2.scss'; // Uncomment this line and comment line above to use Fancybox v.2
+@import 'plugins/jquery.fancybox.v3.scss';
+// Home slider
+@import 'inc/slider';
+// Animation
+@import 'inc/animation';
+// Homes
+@import 'templates/homes';
+
+/* ---------------------------------------
+	Typography / Forms / Inputs / Buttons
+--------------------------------------- */
+
+@import 'typography';
+
+/* ---------------------------------------
+	WooCommerce
+--------------------------------------- */
+
+//@import 'inc/woo';
+
+/* -----------------------------------------
+   WordPress Core Classes
+----------------------------------------- */
+
+@import 'inc/wp-core';
+
+/* -----------------------------------------
+   General fixes
+----------------------------------------- */
+
+html {
+	height: 100%;
+	box-sizing: border-box;
+	overflowX: hidden;
+}
+
+body {
+	position: static !important;
+	box-sizing: inherit;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	min-height: 100vh;
+	font-family: 'Segoe UI';
+
+}
+
+main {
+	display: block;
+}
+
+.grid-container {
+	width: 100%;
+}
+
+*:last-child {
+	margin-bottom: 0;
+}
+
+img {
+	transition: opacity 0.3s ease-in-out;
+
+	&.pre-lazyload, &[data-lazy-src] {
+		opacity: 0;
+	}
+
+	&.lazyloaded {
+		opacity: 1;
+	}
+}
+
+
+body .main-content{
+	padding: 15px 0;
+	.hero{
+		.hero__wrapper{
+			.hero__title {
+				text-transform: uppercase;
+				font-weight: 400;
+				font-size: 25.5px;
+				letter-spacing: 20px;
+				padding: 34px 0;
+				text-align: center;
+				margin-bottom: 0;
+				@include breakpoint(955px down) {
+					font-size: 1.4rem;
+					letter-spacing: 17px;
+				}
+				@include breakpoint(medium down) {
+					font-size: 1.3rem;
+					letter-spacing: 10px;
+				}
+			}
+			.hero__discr{
+				font-family: 'Segoe UI Semi';
+				text-align: center;
+				font-size: 23px;
+				line-height: 39px;
+				font-weight: 300;
+				color: #000000;
+				@include breakpoint(955px down) {
+					font-size: 1.3rem;
+				}
+				@include breakpoint(medium down) {
+					font-size: 1.1rem;
+				}
+			}
+		}
+	}
+}
+
+.titles{
+	display: inline-block;
+	font-size: 34px;
+	line-height: 29px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #a76101;
+	border-bottom: 1px solid #a76101;
+	padding-bottom: .625rem;
+	margin: 0;
+
+	@include breakpoint(955px down){
+		font-size: 2.025rem;
+	}
+	@include breakpoint(768px down){
+		font-size: 1.825rem;
+	}
+	@include breakpoint(480px down){
+		font-size: 1.625rem;
+	}
+}
+
+.builders{
+	padding: 4.375rem 0  3.875rem 0;
+	.builders__wrapper{
+		text-align: center;
+
+		.builders__desk-wrapper{
+			display: flex;
+			padding-top: 1.5rem;
+			@include breakpoint(1130px down){
+				flex-direction: column;
+				align-items: center;
+			}
+			.builders__img-wrapper{
+				width: 50%;
+				@include breakpoint(1130px down){
+					width: 70%;
+				}
+				@include breakpoint(640px down){
+					width: 85%;
+				}
+				.builders__img{
+					width: 100%;
+				}
+			}
+			.builders__names{
+				width: 50%;
+				text-align: left;
+				background-color: #a76101;
+				padding: 1.875rem 0 0 1.5rem ;
+				@include breakpoint(1130px down){
+					width: 70%;
+					text-align: center;
+					padding: .8rem 0;
+				}
+				@include breakpoint(640px down){
+					width: 85%;
+				}
+				.builder__name{
+					padding-bottom: 5px;
+					line-height: 27px;
+					color: #fff;
+					font-size: 1rem;
+					margin: 0;
+					@include breakpoint(480px down){
+						font-size: .8rem;
+					}
+				}
+
+				.builder__home-name{
+					text-decoration: none;
+					color: #fff;
+					font-weight: 900;
+					font-size: 1rem;
+					@include breakpoint(480px down){
+						font-size: .8rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* Homes */
+.homes{
+	text-align: center;
+	padding:0 25px 75px 25px;
+	.homes__title{
+		display: inline-block;
+		font-size: 34px;
+		line-height: 29px;
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
+		color: #a76101;
+		border-bottom: 1px solid #a76101;
+		padding-bottom: .625rem;
+		margin: 0;
+	}
+	.homes__wrapper{
+		padding: 1.25rem 0  4rem;
+
+	}
+	.home__card{
+		text-align: center;
+		width: 100%;
+		background-color: #ffffff;
+		padding: 0 4px;
+		@include breakpoint(765px down){
+			margin-bottom: .488rem;
+			width: 70%;
+		}
+		@include breakpoint(715px down){
+			width: 70% !important;
+
+		}
+
+		.image__wrapper{
+			padding: 3px 3px 0;
+		}
+		.card__inner{
+			border: 1px solid #a76101;
+		}
+		img{
+			width: 100%;
+			max-height: 232px;
+			height: auto;
+		}
+	}
+	.home__title{
+		display: inline-block;
+		font-size: 19px;
+		line-height: 23px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: #a76101;
+		@include breakpoint(850px down){
+			font-size: 1.088rem;
+		}
+	}
+
+	.company__name {
+		font-size: 17px;
+		line-height: 23px;
+		font-weight: 400;
+		color: #ababab;
+		@include breakpoint(850px down){
+			font-size: .963rem;
+		}
+	}
+
+	.footer__text{
+		background-color: #a76101;
+		text-align: center;
+		font-size: 14px;
+		line-height: 32px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #ffffff;
+		padding: 1.063rem 0;
+		@include breakpoint(850px down){
+			font-size: .788rem;
+		}
+	}
+	.text__wrapper{
+		display: inline-block;
+		padding: 1.375rem 0;
+		max-width: 280px;
+	}
+	.all__homes{
+		padding: 20px 28px;
+		font-family: 'Segoe UI';
+		font-size: 1.438rem;
+		line-height: 39px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #ffffff;
+		background-color: #a76101;
+		border: 1px solid #9f8055;
+		@include breakpoint(768px down){
+			font-size: 1.238rem;
+		}
+		@include breakpoint(640px down){
+			font-size: 1.038rem;
+		}
+		@include breakpoint(595px down){
+			font-size: 1rem;
+		}
+	}
+}
+
+/* Guide section */
+
+.guide{
+	padding: 2.313rem 20px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	.guide__inner{
+		padding: 27px 10px 30px;
+		text-align: center;
+		background-color: #fff;
+		background-color: rgba(255,255,255,0.4);
+		@include breakpoint(640px down){
+
+		}
+		img	{
+			display: inline-block;
+			box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.34);
+
+		}
+		.button__wrapper{
+			padding: 40px 0 30px;
+		}
+		a{
+			display: inline-block;
+			padding: 20px 35px;
+			font-family: 'Segoe UI';
+			font-size: 23px;
+			line-height: 39px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: #ffffff;
+			background-color: #a76101;
+			border: 1px solid #9f8055;
+			@include breakpoint(768px down){
+				font-size: 1.238rem;
+			}
+			@include breakpoint(640px down){
+				font-size: 1.038rem;
+				padding: 18px 30px;
+			}
+			@include breakpoint(595px down){
+				font-size: 1rem;
+				padding: 15px 25px;
+			}
+		}
+	}
+}
+
+/* sponsors */
+
+.sponsors{
+	padding: 2.5rem 0;
+	text-align: center;
+
+	.sponsors__wrapper{
+		padding: 3px 15px 70px;
+		text-align: center;
+		@include breakpoint(1072px down){
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+		&:last-child{
+			padding-bottom: 0;
+			padding-top: 35px;
+		}
+		& a{
+			margin: 0 35px;
+			@include breakpoint(1072px down){
+				padding-bottom: 15px;
+			}
+		}
+	}
+
+	.sponsors__title{
+		display: inline-block;
+		font-size: 34px;
+		line-height: 29px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #a76101;
+		border-bottom: 1px solid #a76101;
+		padding-bottom: 0.625rem;
+		margin: 0;
+	}
+}
+@include breakpoint(955px down){
+	.builders__title{
+
+	}
+
+}
+
+@include breakpoint(715px down){
+	.slick-prev{
+		left: 50px;
+	}
+	.slick-next{
+		right: 50px;
+	}
+
+}
+
+@include breakpoint(550px down){
+	.slick-prev{
+		left: 30px;
+	}
+	.slick-next{
+		right: 30px;
+	}
+
+}
+
+@include breakpoint(445px down){
+	.slick-prev{
+		left: 20px;
+	}
+	.slick-next{
+		right: 20px;
+	}
+
+}
+
+
+
+/* -----------------------------------------
+    Contact Form
+----------------------------------------- */
+
+/*basic Gravity Form styles and fixes, if you dont need/use this -
+comment or delete styles below*/
+
+@import 'inc/gform';
+
+/* ------------------------------------
+    Content Styles
+------------------------------------- */
+
+.main-content {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+/* Preloader */
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.preloader {
+	position: fixed;
+	z-index: 100000000;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	visibility: visible;
+	opacity: 1;
+	background-color: #fff;
+	color: #222;
+	transition: opacity 0.4s ease, visibility 0.4s ease;
+
+	&--hidden {
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+.preloader__icon {
+	@include position-center;
+
+	&::before {
+		content: '\f1ce';
+		display: block;
+		font-family: $fa;
+		font-size: 40px;
+		font-weight: 900;
+		animation: spin 1s ease-in-out infinite;
+	}
+}
+
+/* Search form */
+
+.search-form {
+	position: relative;
+
+	.posts-list & {
+		margin-bottom: 40px;
+	}
+}
+
+.search-form__input {
+	padding-right: 75px;
+}
+
+.search-form__submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	height: auto;
+	padding: 10px 15px;
+	cursor: pointer;
+	//font-size: 0; // Uncomment to use icon in search button
+
+	&::after {
+		//content: "\f002"; // Uncomment to use icon in search button
+		font-family: $fa;
+		font-size: 20px;
+		font-weight: 900;
+	}
+}
+
+/* 404 page */
+
+.not-found {
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	.label {
+		background-color: $main-color;
+		text-decoration: none;
+		cursor: pointer;
+		color: #fff;
+
+		&:hover {
+			background-color: darken($main-color, 8);
+			color: #fff;
+		}
+	}
+}
+
+/* ---------------------------------------
+	Repeatable blocks
+--------------------------------------- */
+
+@import 'repeatable-blocks';
+
+/* ---------------------------------------
+	Header
+--------------------------------------- */
+
+@import 'header';
+
+/* ---------------------------------------
+	Sidebar
+--------------------------------------- */
+
+@import 'sidebar';
+
+/* ---------------------------------------
+	Footer
+--------------------------------------- */
+
+@import 'footer';
+
+/*---------------------------------------
+	TMPL: Home page
+---------------------------------------*/
+
+@import 'templates/home';
+
+/* ---------------------------------------
+	Page: Blog
+--------------------------------------- */
+
+@import 'templates/blog';
+
+/* ---------------------------------------
+	TMPL: Default page
+--------------------------------------- */
+
+@import 'templates/default';
+
+/* ---------------------------------------
+	TMPL: Contact page
+--------------------------------------- */
+
+@import 'templates/contact';

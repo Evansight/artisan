@@ -1,0 +1,124 @@
+
+.homes__header{
+  background-color: #4d4d4d;
+  padding: 1.875em 0;
+  .hh__wrapper{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include breakpoint(600px down){
+      flex-direction: column;
+    }
+    .button__title{
+      margin-right: 22px;
+      padding-bottom: 10px;
+      font-size: 34px;
+      line-height: 29px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ffffff;
+      white-space: nowrap;
+      border-bottom: 1px solid #fff;
+      @include breakpoint(850px down){
+        font-size: 1.825rem;
+      }
+      @include breakpoint(650px down){
+        font-size: 1.525rem;
+      }
+      @include breakpoint(600px down){
+        font-size: 1.175rem;
+        padding-bottom: 5px;
+        margin-right: 0;
+      }
+    }
+    .select__title{
+      padding-right: 18px;
+      font-size: 22px;
+      line-height: 25px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ffffff;
+      white-space: nowrap;
+      @include breakpoint(850px down){
+        font-size: 1.175rem;
+      }
+      @include breakpoint(650px down){
+        font-size: .975rem;
+      }
+      @include breakpoint(600px down){
+        padding: 5px 0;
+      }
+    }
+  }
+}
+.grid-container{
+  max-width: 60.75rem;
+}
+
+.homes__block{
+    display: flex ;
+    flex-wrap: wrap;
+    padding: 27px 0;
+    justify-content: center;
+  .homes__card{
+    text-align: center;
+    max-width: 100%;
+    background-color: #ffffff;
+    padding: 0 8px 11px 0;
+    .homes__inner{
+      border: 1px solid #a76101;
+    }
+    .image__wrapper{
+      padding: 3px 3px 0;
+    }
+    img{
+      width: 100%;
+      max-height: 185.34px;
+      height: auto;
+    }
+  }
+  .home__title{
+    display: inline-block;
+    font-size: 19px;
+    line-height: 23px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #a76101;
+    @include breakpoint(850px down){
+      font-size: 1.088rem;
+    }
+  }
+
+  .company__name {
+    font-size: 17px;
+    line-height: 23px;
+    font-weight: 400;
+    color: #ababab;
+    @include breakpoint(850px down){
+      font-size: .963rem;
+    }
+  }
+
+  .footer__text{
+    background-color: #a76101;
+    text-align: center;
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 1.063rem 0;
+    @include breakpoint(850px down){
+      font-size: .788rem;
+    }
+  }
+  .text__wrapper{
+    display: inline-block;
+    padding: 1.375rem 0;
+    max-width: 280px;
+  }
+
+}
